@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // smallest permutation of multiset cnt strictly greater than target, or "" if none
+    
     string smallestGreaterPerm(vector<int> cnt, const string& target) {
         int n = target.size();
         int last_i = -1, last_c = -1;
@@ -38,7 +38,7 @@ public:
         vector<int> cnt(26, 0);
         for (char ch : s) cnt[ch - 'a']++;
 
-        // check palindrome feasibility
+        
         int oddCount = 0, oddChar = -1;
         for (int c = 0; c < 26; c++)
             if (cnt[c] % 2 != 0) { oddCount++; oddChar = c; }
@@ -53,7 +53,7 @@ public:
         char mid = (n % 2 == 1) ? char('a' + oddChar) : '\0';
         string targetPrefix = target.substr(0, P);
 
-        // try x == targetPrefix exactly
+        
         vector<int> tempCnt = halfCnt;
         bool formable = true;
         for (char ch : targetPrefix) {
@@ -71,7 +71,7 @@ public:
             if (A > target) return A;
         }
 
-        // fall back: smallest x strictly greater than targetPrefix
+        
         string x = smallestGreaterPerm(halfCnt, targetPrefix);
         if (x.empty()) return "";
 
