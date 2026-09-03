@@ -10,6 +10,9 @@ public:
            if(nums2[i] % 2 == 0 || nums2[i] %2 != 0){
             return  true;
            }
+           else{
+            return false;
+           }
         }
         return true;
     }
