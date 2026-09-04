@@ -3,7 +3,6 @@ public:
     int firstStableIndex(vector<int>& nums, int k) {
         
         int n = nums.size();
-        int index = -1;
         int ans = INT_MAX;
         int max_no = INT_MIN;
 
