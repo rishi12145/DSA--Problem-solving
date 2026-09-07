@@ -8,7 +8,7 @@ public:
         for (char ch : s) {
             int idx = ch - 'a';
             long long newVal = (total + 1) % MOD;
-            total = (total - dp[idx] + newVal + MOD) % MOD; // +MOD to avoid negative
+            total = (total - dp[idx] + newVal + MOD) % MOD; 
             dp[idx] = newVal;
         }
         
